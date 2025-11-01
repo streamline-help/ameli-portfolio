@@ -16,17 +16,23 @@
 
 @layer base {
   :root {
-    --bg: #FFFFFF;
+    --bg: #FFFDF8;
     --ink: #111111;
-    --hairline: #EDEDED;
-    --accent-1: #58111A;
-    --accent-2: #65000B;
+    --hairline: #E6E4E0;
+    --accent: #D24B1A;
+    --accent-hover: #E0521F;
+    --white-text: #FAFAFA;
   }
 
   html,
   body {
-    background: #FFFFFF;
+    background: #FFFDF8;
     color: #111111;
+  }
+
+  ::selection {
+    background: #D24B1A;
+    color: white;
   }
 }
 

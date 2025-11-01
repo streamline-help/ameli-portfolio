@@ -4,16 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#FFFFFF',
+        bg: '#FFFDF8',
         ink: '#111111',
-        hairline: '#EDEDED',
-        chocolateCosmos: '#58111A',
-        rosewood: '#65000B',
+        hairline: '#E6E4E0',
+        accent: '#D24B1A',
+        accentHover: '#E0521F',
+        whiteText: '#FAFAFA',
       },
       fontFamily: {
         display: ['Polaroid Script', 'serif'],
         alt: ['Aesthetic Moment', 'serif'],
         sans: ['Helvetica Neue', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+      },
+      transitionTimingFunction: {
+        'refined': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       animation: {
         'in-view': 'inView 0.26s ease-out forwards',

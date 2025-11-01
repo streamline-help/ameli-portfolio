@@ -37,7 +37,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-5">
           <Link
             to="/"
-            className="font-display text-2xl text-ink hover:text-chocolateCosmos transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+            className="font-display text-2xl text-ink hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
           >
             Ameli van Zyl
           </Link>
@@ -49,8 +49,8 @@ export default function Header() {
                 to={link.path}
                 className={`text-[17px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4 rounded-sm ${
                   isActiveLink(link.path)
-                    ? 'text-chocolateCosmos underline decoration-1 underline-offset-4'
-                    : 'text-ink hover:text-chocolateCosmos'
+                    ? 'text-accent underline decoration-1 underline-offset-4'
+                    : 'text-ink hover:text-accent'
                 }`}
               >
                 {link.label}
@@ -59,7 +59,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-hairline transition-colors focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
+            className="md:hidden p-2 rounded-lg hover:bg-hairline transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -76,7 +76,7 @@ export default function Header() {
                   to={link.path}
                   className={`block px-4 py-2 rounded-lg transition-colors duration-200 ${
                     isActiveLink(link.path)
-                      ? 'text-chocolateCosmos bg-chocolateCosmos/5'
+                      ? 'text-accent bg-accent/5'
                       : 'text-ink hover:bg-hairline'
                   }`}
                   onClick={() => setIsMenuOpen(false)}

@@ -15,7 +15,7 @@ export default function ProjectTile({ title, meta, image, href, alt }: ProjectTi
   return (
     <Link
       to={href}
-      className="group block relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+      className="group block relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -24,7 +24,7 @@ export default function ProjectTile({ title, meta, image, href, alt }: ProjectTi
           src={image}
           alt={alt || title}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 ease-refined group-hover:scale-[1.02]"
         />
         <div
           className={`absolute inset-0 bg-ink transition-opacity duration-300 ${
@@ -36,8 +36,8 @@ export default function ProjectTile({ title, meta, image, href, alt }: ProjectTi
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <h3 className="font-display text-3xl md:text-4xl text-bg mb-1">{title}</h3>
-          {meta && <p className="text-bg/90 text-sm">{meta}</p>}
+          <h3 className="font-display text-3xl md:text-4xl text-whiteText mb-1">{title}</h3>
+          {meta && <p className="text-whiteText/90 text-sm">{meta}</p>}
         </div>
       </div>
     </Link>

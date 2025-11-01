@@ -64,7 +64,7 @@ export default function Home() {
           <InViewFade className="text-center">
             <Link
               to="/work"
-              className="inline-block px-8 py-3 border border-chocolateCosmos text-chocolateCosmos rounded-full hover:bg-chocolateCosmos hover:text-bg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+              className="inline-block px-7 py-3 border-2 border-accent text-accent rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accent hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/40"
             >
               View All Work
             </Link>
@@ -93,7 +93,7 @@ export default function Home() {
               </p>
               <Link
                 to="/about"
-                className="inline-block text-chocolateCosmos underline underline-offset-4 hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                className="relative inline-block text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
               >
                 Learn More
               </Link>
@@ -109,13 +109,13 @@ export default function Home() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-10 py-4 bg-chocolateCosmos text-bg rounded-full hover:bg-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                className="px-7 py-3 bg-accent text-white rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accentHover hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent/40"
               >
                 Get in touch
               </Link>
               <Link
                 to="/work"
-                className="px-10 py-4 border border-chocolateCosmos text-chocolateCosmos rounded-full hover:bg-chocolateCosmos hover:text-bg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                className="px-7 py-3 border-2 border-accent text-accent rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accent hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/40"
               >
                 View all work
               </Link>

@@ -34,7 +34,7 @@ export default function Contact() {
               <h1 className="h1 mb-6">Get in Touch</h1>
               <a
                 href="mailto:ami1vanzyl@gmail.com"
-                className="text-2xl md:text-3xl text-chocolateCosmos underline underline-offset-8 hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                className="relative text-2xl md:text-3xl text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-8px] after:w-full after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:text-accentHover"
               >
                 ami1vanzyl@gmail.com
               </a>
@@ -56,6 +56,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-bg border border-hairline rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-hairline rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 outline-none"
                     placeholder="Your name"
                   />
                 </div>
@@ -72,6 +73,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-bg border border-hairline rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-hairline rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 outline-none"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -88,19 +90,20 @@ export default function Contact() {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-bg border border-hairline rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 resize-none outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-hairline rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none outline-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-chocolateCosmos text-bg px-8 py-3 rounded-full font-medium transition-colors duration-200 hover:bg-rosewood focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                  className="w-full bg-accent text-white px-7 py-3 rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accentHover hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent/40"
                 >
                   Send Message
                 </button>
 
                 {submitted && (
-                  <div className="p-4 bg-chocolateCosmos/10 border border-chocolateCosmos/20 rounded">
+                  <div className="p-4 bg-accent/10 border border-accent/20 rounded-lg">
                     <p className="text-ink text-center text-sm">
                       Thank you — I'll get back to you soon.
                     </p>
@@ -119,6 +122,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-chocolateCosmos hover:text-bg hover:border-chocolateCosmos transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
+                      className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-accent hover:text-white hover:border-accent transition-all duration-200 ease-refined hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent"
                       aria-label="LinkedIn"
                     >
                       <Linkedin size={20} />
@@ -128,6 +132,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-chocolateCosmos hover:text-bg hover:border-chocolateCosmos transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
+                      className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-accent hover:text-white hover:border-accent transition-all duration-200 ease-refined hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent"
                       aria-label="Instagram"
                     >
                       <Instagram size={20} />
@@ -141,7 +146,7 @@ export default function Contact() {
                     <p>
                       <a
                         href="tel:+27727431971"
-                        className="hover:text-chocolateCosmos transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                        className="relative hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
                       >
                         072 743 1971
                       </a>

@@ -71,6 +71,7 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-6 text-chocolateCosmos hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                className="relative inline-flex items-center gap-2 mt-6 text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
               >
                 Visit EDUVOS <ExternalLink size={16} />
               </a>
@@ -97,7 +98,7 @@ export default function About() {
               <p>
                 <a
                   href="tel:+27727431971"
-                  className="text-ink hover:text-chocolateCosmos transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                  className="relative text-ink transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:text-accent hover:after:w-full"
                 >
                   072 743 1971
                 </a>
@@ -105,7 +106,7 @@ export default function About() {
               <p>
                 <a
                   href="mailto:ami1vanzyl@gmail.com"
-                  className="text-chocolateCosmos underline underline-offset-4 hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                  className="relative text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:text-accentHover"
                 >
                   ami1vanzyl@gmail.com
                 </a>
@@ -115,7 +116,7 @@ export default function About() {
                   href="https://www.linkedin.com/in/ameli-van-zyl-34b506261"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-ink hover:text-chocolateCosmos transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                  className="relative text-ink transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:text-accent hover:after:w-full"
                 >
                   LinkedIn
                 </a>

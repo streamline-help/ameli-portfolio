@@ -11,7 +11,7 @@ export default function Footer() {
             </p>
             <a
               href="mailto:ami1vanzyl@gmail.com"
-              className="text-bg/80 hover:text-bg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-bg focus:ring-offset-2 focus:ring-offset-ink"
+              className="text-whiteText/80 hover:text-whiteText transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-whiteText focus:ring-offset-2 focus:ring-offset-ink"
             >
               ami1vanzyl@gmail.com
             </a>
@@ -22,7 +22,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/ameli-van-zyl-34b506261/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center border border-bg/20 rounded-full hover:bg-bg hover:text-ink transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-bg"
+              className="w-10 h-10 flex items-center justify-center border border-whiteText/20 rounded-full hover:bg-whiteText hover:text-ink transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-whiteText"
               aria-label="LinkedIn"
             >
               <Linkedin size={18} />
@@ -31,7 +31,7 @@ export default function Footer() {
               href="https://www.instagram.com/ameli.graphics/profilecard/?igsh=MTY0a3pjdGh0OGx5OQ%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center border border-bg/20 rounded-full hover:bg-bg hover:text-ink transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-bg"
+              className="w-10 h-10 flex items-center justify-center border border-whiteText/20 rounded-full hover:bg-whiteText hover:text-ink transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-whiteText"
               aria-label="Instagram"
             >
               <Instagram size={18} />
