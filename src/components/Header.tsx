@@ -42,14 +42,15 @@ export default function Header() {
             Ameli van Zyl
           </Link>
 
-          <nav className="hidden md:flex gap-8">
+          <nav className="nav hidden md:flex gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-[17px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 rounded-sm ${
+                aria-current={isActiveLink(link.path) ? 'page' : undefined}
+                className={`text-[17px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 ${
                   isActiveLink(link.path)
-                    ? 'text-accent underline decoration-1 underline-offset-4'
+                    ? 'text-accent'
                     : 'text-ink hover:text-accent'
                 }`}
               >

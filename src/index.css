@@ -1,3 +1,5 @@
+@import './styles/tokens.css';
+
 @font-face {
   font-family: "Polaroid Script";
   src: url("/fonts/PolaroidScript.otf") format("opentype");
@@ -15,105 +17,77 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    /* Colors */
-    --bg: #FAF7F3;
-    --ink: #111111;
-    --muted-ink: #555555;
-    --accent: #A2341F;
-    --accent-600: #BF3B2B;
-    --line: #E7E3E0;
-    --surface: #FFFFFF;
-    
-    /* Spacing & Layout */
-    --radius: 14px;
-    --container-w: 1180px;
-    --section-pad: clamp(48px, 8vw, 112px);
-  }
-
   html,
   body {
     font-family: "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background: var(--bg);
+    background: var(--cream);
     color: var(--ink);
     scroll-behavior: smooth;
-  }
-
-  h1, h2, h3, h4 {
-    font-family: "Polaroid Script", serif;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-  }
-
-  h1 {
-    font-size: clamp(40px, 7vw, 88px);
-  }
-
-  h2 {
-    font-size: clamp(32px, 5vw, 56px);
-  }
-
-  h3 {
-    font-size: clamp(24px, 3.2vw, 34px);
-  }
-
-  body, p, li, small {
-    font-size: clamp(16px, 1.4vw, 18px);
   }
 
   ::selection {
     background: var(--accent);
     color: white;
   }
+}
 
-  /* Editorial flat images */
-  img {
-    object-fit: cover;
-    border-radius: 0;
+@layer utilities {
+  /* Typography utilities */
+  .title {
+    font-family: "Polaroid Script", serif;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+
+  .altTitle {
+    font-family: "Aesthetic Moment", "Polaroid Script", serif;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+
+  .body {
+    font-family: "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  .meta {
+    color: var(--muted);
+  }
+
+  /* Legacy heading utilities for compatibility */
+  .h1 {
+    font-family: "Polaroid Script", serif;
+    font-size: clamp(48px, 7vw, 116px);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+
+  .h2 {
+    font-family: "Polaroid Script", serif;
+    font-size: clamp(34px, 4.5vw, 64px);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
-  /* Container utility */
-  .container {
-    max-width: var(--container-w);
-    margin-inline: auto;
-    padding-inline: clamp(16px, 4vw, 40px);
-  }
-
-  /* Section spacing */
-  section {
-    padding-block: var(--section-pad);
-    border-top: 1px solid var(--line);
-  }
-
-  section:first-of-type {
-    border-top: 0;
-  }
-
   /* Buttons */
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
-    padding: 0.7rem 1.2rem;
-    border: 1.5px solid var(--ink);
-    color: var(--ink);
-    background: transparent;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--ink);
     border-radius: 999px;
+    background: transparent;
+    color: var(--ink);
     font-family: inherit;
-    font-size: clamp(16px, 1.4vw, 18px);
     text-decoration: none;
-    transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease, transform 0.18s ease;
-    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
 
   .btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    transform: translateY(-1px);
+    background: var(--ink);
+    color: var(--cream);
   }
 
   .btn--accent {
@@ -122,14 +96,59 @@
   }
 
   .btn--accent:hover {
-    color: var(--surface);
-    background: var(--accent-600);
-    border-color: var(--accent-600);
+    background: var(--accent);
+    color: white;
   }
 
   .btn:focus {
     outline: 2px dashed var(--accent);
     outline-offset: 3px;
+  }
+
+  /* Cards */
+  .card {
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .card__img {
+    aspect-ratio: 4/3;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card__meta {
+    padding: 16px 16px 18px;
+  }
+
+  .card__title {
+    font-family: "Polaroid Script", serif;
+    font-size: clamp(20px, 2vw, 28px);
+  }
+
+  .card__tags {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  /* Navigation */
+  .nav a {
+    padding: 6px 0;
+    border-bottom: 1px solid transparent;
+  }
+
+  .nav a[aria-current="page"] {
+    border-bottom-color: var(--ink);
   }
 
   /* Links */
@@ -160,23 +179,6 @@
     transform: scaleX(1);
   }
 
-  .link:focus {
-    outline: 2px dashed var(--accent);
-    outline-offset: 3px;
-  }
-
-  /* Cards */
-  .card {
-    border: 1px solid var(--line);
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 20px;
-  }
-
-  .card:hover {
-    border-color: var(--accent);
-  }
-
   /* Reveal animation */
   .reveal {
     opacity: 0;
@@ -194,26 +196,5 @@
       opacity: 1;
       transform: none;
     }
-  }
-}
-
-@layer utilities {
-  /* Legacy heading utilities for compatibility */
-  .h1 {
-    font-family: "Polaroid Script", serif;
-    font-size: clamp(40px, 7vw, 88px);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-  }
-
-  .h2 {
-    font-family: "Polaroid Script", serif;
-    font-size: clamp(32px, 5vw, 56px);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-  }
-
-  .altTitle {
-    font-family: "Aesthetic Moment", serif;
   }
 }

@@ -4,12 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#FAF7F3',
+        cream: '#FAF6EF',
         ink: '#111111',
-        'muted-ink': '#555555',
-        accent: '#A2341F',
-        'accent-600': '#BF3B2B',
-        line: '#E7E3E0',
+        accent: '#C23A2B',
+        muted: '#8D8D8D',
+        hairline: '#E8E2D8',
+        /* Legacy aliases for backward compatibility */
+        bg: '#FAF6EF',
+        'muted-ink': '#8D8D8D',
+        line: '#E8E2D8',
         surface: '#FFFFFF',
         dark: '#1A1A1A',
         whiteText: '#F5F5F5',

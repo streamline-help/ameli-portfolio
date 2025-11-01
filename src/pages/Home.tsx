@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import InViewFade from '../components/InViewFade';
 import ProjectTile from '../components/ProjectTile';
-import EditorialTwoToneHero from '../components/EditorialTwoToneHero';
+import HeroMinimal from '../components/HeroMinimal';
 
 const jimmysImages = [
   'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1000&fit=crop',
@@ -37,11 +37,7 @@ const featuredProjects = [
 export default function Home() {
   return (
     <div className="bg-bg">
-      <EditorialTwoToneHero
-        images={jimmysImages}
-        title="Ameli van Zyl"
-        subtitle="Chase Perfection. Create Excellence."
-      />
+      <HeroMinimal />
 
       <section className="py-20 md:py-32 border-t border-line">
         <Container>
