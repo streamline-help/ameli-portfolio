@@ -25,7 +25,7 @@ export default function ProjectTile({ title, meta, image, href, alt }: ProjectTi
           alt={alt || title}
           loading="lazy"
           className={`w-full h-full object-cover transition-all duration-700 ${
-            isHovered ? 'grayscale-0 scale-[1.02]' : 'grayscale'
+            isHovered ? 'scale-[1.02]' : ''
           }`}
         />
         <div

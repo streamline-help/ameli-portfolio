@@ -40,7 +40,7 @@ export default function EditorialTwoToneHero({
             <img
               src={image}
               alt={`Hero image ${index + 1}`}
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
           </div>
