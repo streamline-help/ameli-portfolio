@@ -15,7 +15,7 @@ export default function SplitSixImageHero({
   title = 'Ameli van Zyl',
   quote = 'Chase perfection. Create excellence.',
   intervalMs = 6500,
-  align = 'bottom-left',
+  align = 'center-middle',
   titleClass,
 }: SplitSixImageHeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -72,7 +72,7 @@ export default function SplitSixImageHero({
   }, [intervalMs]);
 
   const alignClass =
-    align === 'center' ? 'shero6__overlay--center' : 'shero6__overlay--bottom-left';
+    align === 'center' ? 'shero6__overlay--center' : 'shero6__overlay--center-middle';
   const titleClassFinal = titleClass ? `shero6__title ${titleClass}` : 'shero6__title';
 
   return (

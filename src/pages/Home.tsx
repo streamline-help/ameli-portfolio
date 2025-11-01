@@ -42,6 +42,7 @@ export default function Home() {
         title="Ameli van Zyl"
         quote="Chase perfection. Create excellence."
         titleClass="altTitle"
+        align="center-middle"
       />
 
       <section className="py-20 md:py-32 border-t border-hairline">
