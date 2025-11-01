@@ -4,26 +4,41 @@ import { Link } from 'react-router-dom';
 export default function About() {
   return (
     <main className="min-h-screen bg-[var(--bg-cream)] text-[var(--ink)]">
-      {/* Intro */}
-      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pt-[8vh] pb-[6vh] grid lg:grid-cols-[1fr_1.1fr] gap-[var(--gap)] items-start">
-        <h1 className="font-[Polaroid_Script] text-[clamp(44px,8vw,104px)] leading-[0.9] tracking-[-0.01em]">
+      {/* Name at top */}
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pt-[8vh] pb-[6vh]">
+        <h1 className="font-[Polaroid_Script] text-[clamp(44px,8vw,104px)] leading-[0.9] tracking-[-0.01em] text-center">
           Ameli van Zyl
         </h1>
-        <p className="text-[clamp(16px,1.6vw,20px)] leading-[1.65] text-[var(--ink)]/90">
-          I focus on marketing and branding design, creating visual identities and campaigns that connect with audiences in meaningful ways. My work blends strategic thinking with expressive design—mixing illustration, motion graphics and refined typography to build brands that look polished and feel memorable.
-        </p>
       </section>
 
-      {/* Split block: image placeholder + CTA */}
-      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pb-[8vh] grid lg:grid-cols-[1fr_1.05fr] gap-[var(--gap)] items-center">
-        <div className="aspect-[4/3] bg-black/5 rounded-[var(--radius)]" aria-hidden />
-        <div className="flex flex-col gap-4">
-          <p className="text-[clamp(16px,1.5vw,18px)] text-[var(--ink-muted)]">
-            Through this mix of creativity and strategy, I aim to design brands that not only look good but also tell a story and leave a lasting impression.
+      {/* Split block: image on left, text + button on right */}
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pb-[8vh] grid lg:grid-cols-[1fr_1.1fr] gap-[var(--gap)] items-start">
+        {/* Image with hover animation */}
+        <div className="aspect-[4/3] bg-black/5 rounded-[var(--radius)] overflow-hidden transition-transform duration-300 ease-out hover:-translate-y-2" aria-hidden>
+          <img 
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Text and button */}
+        <div className="flex flex-col gap-6">
+          <p className="text-[clamp(16px,1.6vw,20px)] leading-[1.65] text-[var(--ink)]/90">
+            I focus on marketing and branding design, creating visual<br />
+            identities and campaigns that connect with audiences in<br />
+            meaningful ways. My goal is to bring a sense of creativity and<br />
+            originality into every project by blending strategic thinking with<br />
+            expressive design. I enjoy combining illustration and motion<br />
+            graphics to add personality, depth, and movement to my work —<br />
+            transforming ideas into visuals that are both engaging and<br />
+            memorable. Through this mix of creativity and strategy, I aim to<br />
+            design brands that not only look good but also tell a story and<br />
+            leave a lasting impression.
           </p>
           <Link
             to="/work"
-            className="inline-flex h-11 w-fit items-center justify-center rounded-[999px] border border-[var(--brand-deep)] px-6 text-[15px] font-medium text-[var(--brand-deep)] transition-colors hover:bg-[var(--brand-deep)] hover:text-[var(--bg-cream)]"
+            className="btn-outline w-fit"
           >
             See my work
           </Link>
