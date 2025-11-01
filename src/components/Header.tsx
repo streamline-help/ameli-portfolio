@@ -18,26 +18,37 @@ export default function Header() {
   };
 
   return (
-    <nav className="navbar w-full bg-[#E6E6E6]">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-10 h-[68px] flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="font-[Polaroid_Script] text-2xl text-ink hover:text-[var(--brand)] transition-colors duration-200">
-            Ameli van Zyl
-          </span>
+    <header style={{ background: '#E9E6E0', borderBottom: '1px solid var(--border)' }}>
+      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '68px' }}>
+        <Link to="/" style={{ fontFamily: 'Polaroid Script', fontSize: '28px', textDecoration: 'none', color: 'inherit' }}>
+          Ameli van Zyl
         </Link>
-        <div className="flex items-center gap-2">
+        <nav style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-link ${isActiveLink(link.path) ? 'text-[var(--brand)]' : ''}`}
+              style={{
+                fontFamily: 'Helvetica Neue',
+                fontSize: '15px',
+                textDecoration: 'none',
+                color: isActiveLink(link.path) ? 'var(--bg-red)' : 'inherit',
+                transition: 'all 0.2s',
+              }}
+              onMouseEnter={(e) => {
+                if (!isActiveLink(link.path)) e.currentTarget.style.textDecoration = 'underline';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = 'none';
+              }}
             >
               {link.label}
             </Link>
           ))}
-        </div>
+        </nav>
         <button
-          className="md:hidden p-2 rounded-lg hover:bg-black/10 transition-colors text-ink"
+          style={{ display: 'none', padding: '8px', background: 'transparent', border: 'none', cursor: 'pointer' }}
+          className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -45,15 +56,20 @@ export default function Header() {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden border-t border-black/10 bg-[#E6E6E6]">
-          <nav className="py-4 space-y-2">
+        <div style={{ background: '#E9E6E0', borderTop: '1px solid var(--border)' }} className="md:hidden">
+          <nav style={{ padding: '16px' }}>
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block px-4 py-2 nav-link text-ink hover:text-[var(--brand)] ${
-                  isActiveLink(link.path) ? 'text-[var(--brand)]' : ''
-                }`}
+                style={{
+                  display: 'block',
+                  padding: '8px 16px',
+                  fontFamily: 'Helvetica Neue',
+                  fontSize: '15px',
+                  textDecoration: 'none',
+                  color: isActiveLink(link.path) ? 'var(--bg-red)' : 'inherit',
+                }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
@@ -62,6 +78,6 @@ export default function Header() {
           </nav>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
