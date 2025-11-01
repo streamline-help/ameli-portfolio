@@ -16,8 +16,8 @@ export default function About() {
         {/* Image with hover animation */}
         <div className="aspect-[4/3] bg-black/5 rounded-[var(--radius)] overflow-hidden transition-transform duration-300 ease-out hover:-translate-y-2" aria-hidden>
           <img 
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop" 
-            alt="" 
+            src="/ameli-van-zyl.webp" 
+            alt="Ameli van Zyl" 
             className="w-full h-full object-cover"
           />
         </div>

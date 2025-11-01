@@ -1,6 +1,6 @@
 /* === FOUNDATIONS === */
 
-/* Colors */
+/* Colors - Single source of truth */
 :root {
   --bg-cream: #faf5eb;
   --bg-red: #c73e1d;
@@ -8,6 +8,13 @@
   --ink-60: rgba(11, 11, 11, 0.6);
   --paper: #ffffff;
   --border: rgba(0, 0, 0, 0.1);
+
+  /* Legacy aliases for compatibility */
+  --cream: var(--bg-cream);
+  --accent: var(--bg-red);
+  --brand-deep: var(--bg-red);
+  --hairline: var(--border);
+  --muted: var(--ink-60);
 
   /* Spacing */
   --space-1: 8px;
@@ -18,9 +25,20 @@
   --space-8: 64px;
   --space-12: 96px;
 
+  /* Legacy spacing aliases */
+  --pad-xs: var(--space-1);
+  --pad-sm: 14px;
+  --pad-md: var(--space-3);
+  --pad-lg: var(--space-6);
+  --pad-xl: var(--space-8);
+  --gap: clamp(16px, 3vw, 32px);
+
   /* Radius & Shadow */
   --radius: 14px;
   --shadow-polaroid: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  /* Layout */
+  --container-w: 1280px;
 }
 
 /* Font Faces */
@@ -67,44 +85,82 @@
 /* Base */
 html,
 body {
+  margin: 0;
+  padding: 0;
   background: var(--bg-cream);
   color: var(--ink);
-  font-family: "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family: "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
   scroll-behavior: smooth;
 }
 
-/* Type Scale */
+::selection {
+  background: var(--bg-red);
+  color: var(--paper);
+}
+
+/* ============================================================
+   TYPOGRAPHY SCALE - Use these throughout the site
+   ============================================================ */
+
 .display {
   font-family: "Polaroid Script";
   font-size: clamp(56px, 10vw, 140px);
   line-height: 0.9;
+  font-weight: 400;
 }
 
 .h1 {
   font-family: "Polaroid Script";
   font-size: clamp(36px, 6vw, 80px);
   line-height: 1.1;
+  font-weight: 400;
 }
 
 .h2 {
   font-family: "Polaroid Script";
   font-size: clamp(28px, 4.8vw, 56px);
   line-height: 1.1;
+  font-weight: 400;
+}
+
+.h3 {
+  font-family: "Polaroid Script";
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.2;
+  font-weight: 400;
 }
 
 .kicker {
-  font: 600 0.8rem/1 "Helvetica Neue";
+  font-family: "Helvetica Neue";
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-60);
 }
 
 .copy {
-  font: 400 clamp(16px, 1.6vw, 18px) / 1.8 "Helvetica Neue", system-ui, Arial, sans-serif;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.8;
+  color: var(--ink);
 }
 
-/* Utilities */
+.body,
+.altTitle {
+  font-family: "Aesthetic Moment", "Polaroid Script", serif;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+
 .rule {
   height: 1px;
   background: var(--border);
@@ -113,7 +169,7 @@ body {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: var(--container-w);
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -128,7 +184,10 @@ body {
   }
 }
 
-/* Section Themes */
+/* ============================================================
+   SECTION THEMES
+   ============================================================ */
+
 .band--cream {
   background: var(--bg-cream);
   color: var(--ink);
@@ -150,7 +209,14 @@ body {
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* Buttons */
+.band--red .rule {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   BUTTONS - Use these throughout
+   ============================================================ */
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -164,6 +230,7 @@ body {
   text-decoration: none;
   font-family: "Helvetica Neue", system-ui, sans-serif;
   font-weight: 500;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -195,7 +262,9 @@ body {
   text-decoration: none;
   font-family: "Helvetica Neue", system-ui, sans-serif;
   font-weight: 500;
+  font-size: 15px;
   cursor: pointer;
+  border: none;
 }
 
 .btn-white:hover {
@@ -211,7 +280,10 @@ body {
   font-size: 14px;
 }
 
-/* Images */
+/* ============================================================
+   IMAGES
+   ============================================================ */
+
 .polaroid {
   background: #fff;
   padding: 12px;
@@ -227,12 +299,12 @@ body {
 
 .polaroid figcaption {
   margin-top: 8px;
+  font-family: "Helvetica Neue";
   font-size: 12px;
   color: var(--ink-60);
   text-align: center;
 }
 
-/* Image frame */
 .img-frame {
   background: #fff;
   border: 1px solid var(--border);
@@ -246,7 +318,10 @@ body {
   display: block;
 }
 
-/* Project tiles */
+/* ============================================================
+   PROJECT TILES & CARDS
+   ============================================================ */
+
 .project-tile {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -256,10 +331,51 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Forms */
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.card__img {
+  aspect-ratio: 4/3;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__meta {
+  padding: 16px 16px 18px;
+}
+
+.card__title {
+  font-family: "Polaroid Script", serif;
+  font-size: clamp(20px, 2vw, 28px);
+  margin: 0 0 8px 0;
+}
+
+.card__tags {
+  font-family: "Helvetica Neue";
+  color: var(--ink-60);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   FORMS
+   ============================================================ */
+
 input,
 textarea,
 select {
+  width: 100%;
   height: 44px;
   padding: 0 16px;
   border: 1px solid var(--border);
@@ -268,6 +384,7 @@ select {
   font-size: 15px;
   background: var(--paper);
   color: var(--ink);
+  transition: all 0.2s;
 }
 
 input:focus,
@@ -275,6 +392,7 @@ textarea:focus,
 select:focus {
   outline: 2px solid rgba(199, 62, 29, 0.35);
   outline-offset: 2px;
+  border-color: transparent;
 }
 
 textarea {
@@ -284,7 +402,19 @@ textarea {
   resize: vertical;
 }
 
-/* Grids */
+label {
+  display: block;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+/* ============================================================
+   GRIDS
+   ============================================================ */
+
 .grid {
   display: grid;
   gap: var(--space-3);
@@ -304,10 +434,37 @@ textarea {
   }
 }
 
-/* Motion */
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+/* ============================================================
+   MOTION
+   ============================================================ */
+
 @media (prefers-reduced-motion: no-preference) {
   .fade-in {
     animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   @keyframes fadeIn {
@@ -322,17 +479,58 @@ textarea {
   }
 }
 
-/* Link styles */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* Lists */
+.link {
+  color: var(--ink);
+  text-decoration: none;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease;
+}
+
+.link:hover {
+  color: var(--bg-red);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   MISC
+   ============================================================ */
+
 ul,
 ol {
   list-style: none;
@@ -340,14 +538,12 @@ ol {
   margin: 0;
 }
 
-/* Reset */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: var(--space-6) 0;
+}
+
 * {
   box-sizing: border-box;
 }
-
-/* Selection */
-::selection {
-  background: var(--bg-red);
-  color: var(--paper);
-}
-
