@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6">
           <div className="text-center">
             <p className="font-medium mb-2">
-              © 2025 Ameli van Zyl
+              © 2025 Ameli van Zyl • Graphic Designs
             </p>
             <a
               href="mailto:ami1vanzyl@gmail.com"
