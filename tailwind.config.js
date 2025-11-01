@@ -4,14 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
+        'bg-cream': '#FAF5EB',
         cream: '#FAF6EF',
-        ink: '#111111',
+        ink: '#0E0E0E',
+        'ink-muted': '#5E5E5E',
         accent: '#C23A2B',
+        'brand-deep': '#C73E1D',
+        'brand-deep-ink': '#7A240F',
         muted: '#8D8D8D',
         hairline: '#E8E2D8',
         /* Legacy aliases for backward compatibility */
-        bg: '#FAF6EF',
-        'muted-ink': '#8D8D8D',
+        bg: '#FAF5EB',
+        'muted-ink': '#5E5E5E',
         line: '#E8E2D8',
         surface: '#FFFFFF',
         dark: '#1A1A1A',

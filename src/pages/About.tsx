@@ -1,284 +1,123 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Container from '../components/Container';
-import InViewFade from '../components/InViewFade';
-import Timeline from '../components/Timeline';
-import { ExternalLink, ArrowRight, Camera, Video, Palette, Box } from 'lucide-react';
-
-const experienceTimeline = [
-  {
-    period: 'June 2024 – Present',
-    title: "Jimmy's Burger Bar",
-    subtitle: 'Lead designer for brand identity and social media design, ensuring consistent, engaging visual communication across platforms.'
-  },
-  {
-    period: 'January 2025 – Present',
-    title: 'JJ Glassworks',
-    subtitle: 'Overseeing logo redesign and a full brand refresh, focused on a modern yet timeless identity that strengthens the company\'s image.'
-  }
-];
-
-const softwareSkills = [
-  'Adobe Photoshop',
-  'Adobe Illustrator', 
-  'Adobe InDesign',
-  'Adobe Premiere Pro',
-  'Adobe After Effects',
-  'Figma'
-];
-
-const expertiseCards = [
-  {
-    icon: Camera,
-    title: 'Photo Editing',
-    description: 'Professional color correction, compositing, and retouching for campaigns.'
-  },
-  {
-    icon: Video,
-    title: 'Video Editing', 
-    description: 'Dynamic, story-driven edits for social and marketing.'
-  },
-  {
-    icon: Palette,
-    title: 'Illustration',
-    description: 'Conceptual & digital artwork for branding, packaging, and storytelling.'
-  },
-  {
-    icon: Box,
-    title: '3D Design',
-    description: 'Visualizing products and environments with precision and flair.'
-  }
-];
 
 export default function About() {
   return (
-    <div className="bg-bg">
-      {/* Hero Section */}
-      <section className="py-20 md:py-32">
-        <Container>
-          <InViewFade>
-            <h1 className="h1 text-accent text-center mb-16">About Me</h1>
-          </InViewFade>
-          
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
-            {/* Profile Image */}
-            <InViewFade>
-              <div className="flex justify-center lg:justify-start">
-                <div className="w-80 h-80 md:w-96 md:h-96">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
-                    alt="Ameli van Zyl portrait"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </InViewFade>
-
-            {/* Intro Content */}
-            <InViewFade delay={150}>
-              <div className="text-center lg:text-left space-y-6">
-                <p className="text-lg leading-relaxed text-ink/80 font-light">
-                  I'm Ameli van Zyl, a dedicated graphic designer currently completing my BA in Graphic Design at EDUVOS. I craft visually striking, detail-driven work that balances creativity with clear purpose. My focus is refined, high-quality design that communicates effectively and leaves a lasting impression.
-                </p>
-                
-                <Link
-                  to="/work"
-                  className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
-                >
-                  View My Portfolio →
-                </Link>
-              </div>
-            </InViewFade>
-          </div>
-        </Container>
+    <main className="min-h-screen bg-[var(--bg-cream)] text-[var(--ink)]">
+      {/* Intro */}
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pt-[8vh] pb-[6vh] grid lg:grid-cols-[1fr_1.1fr] gap-[var(--gap)] items-start">
+        <h1 className="font-[Polaroid_Script] text-[clamp(44px,8vw,104px)] leading-[0.9] tracking-[-0.01em]">
+          Ameli van Zyl
+        </h1>
+        <p className="text-[clamp(16px,1.6vw,20px)] leading-[1.65] text-[var(--ink)]/90">
+          I focus on marketing and branding design, creating visual identities and campaigns that connect with audiences in meaningful ways. My work blends strategic thinking with expressive design—mixing illustration, motion graphics and refined typography to build brands that look polished and feel memorable.
+        </p>
       </section>
 
-      {/* Experience Section */}
-      <section className="py-20 md:py-32 border-t border-line">
-        <Container>
-          <InViewFade>
-            <h2 className="h2 text-accent mb-12">Experience</h2>
-          </InViewFade>
-          
-          <InViewFade delay={100}>
-            <div className="max-w-3xl">
-              <Timeline items={experienceTimeline} />
+      {/* Split block: image placeholder + CTA */}
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pb-[8vh] grid lg:grid-cols-[1fr_1.05fr] gap-[var(--gap)] items-center">
+        <div className="aspect-[4/3] bg-black/5 rounded-[var(--radius)]" aria-hidden />
+        <div className="flex flex-col gap-4">
+          <p className="text-[clamp(16px,1.5vw,18px)] text-[var(--ink-muted)]">
+            Through this mix of creativity and strategy, I aim to design brands that not only look good but also tell a story and leave a lasting impression.
+          </p>
+          <Link
+            to="/work"
+            className="inline-flex h-11 w-fit items-center justify-center rounded-[999px] border border-[var(--brand-deep)] px-6 text-[15px] font-medium text-[var(--brand-deep)] transition-colors hover:bg-[var(--brand-deep)] hover:text-[var(--bg-cream)]"
+          >
+            See my work
+          </Link>
+        </div>
+      </section>
+
+      {/* Skills + Tool Icons */}
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pb-[8vh] grid lg:grid-cols-2 gap-[var(--gap)]">
+        <div>
+          <h2 className="font-[Polaroid_Script] text-[clamp(36px,6vw,72px)] leading-[0.95] mb-4">My Skills</h2>
+          <ul className="space-y-2 text-[clamp(16px,1.4vw,18px)]">
+            <li>Branding & Visual Identity</li>
+            <li>Print & Packaging Design</li>
+            <li>Advertising & Campaign Design</li>
+            <li>Motion Graphics / Video Editing</li>
+            <li>Social Media</li>
+          </ul>
+        </div>
+        <div className="grid grid-cols-4 gap-4 place-items-start">
+          {['Pr', 'Ai', 'Ae', 'Ps', 'Id'].map((k) => (
+            <div
+              key={k}
+              className="h-16 w-16 rounded-[12px] bg-[var(--ink)] text-[var(--bg-cream)] grid place-items-center text-xl font-bold"
+            >
+              {k}
             </div>
-          </InViewFade>
-        </Container>
+          ))}
+        </div>
       </section>
 
-      {/* Software Skills Section */}
-      <section className="py-20 md:py-32 border-t border-line">
-        <Container>
-          <InViewFade>
-            <h2 className="h2 text-accent mb-8">Software Skills</h2>
-          </InViewFade>
-          
-          <InViewFade delay={100}>
-            <p className="text-lg text-ink/80 font-light tracking-wide mb-8">
-              {softwareSkills.join(' / ')}
+      {/* Education + Interests */}
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pb-[8vh] grid lg:grid-cols-2 gap-[var(--gap)]">
+        <div>
+          <h2 className="font-[Polaroid_Script] text-[clamp(36px,6vw,72px)] leading-[0.95] mb-3">My Education</h2>
+          <p className="font-semibold">Bachelor of Arts in Graphic Design</p>
+          <p>EDUVOS 2023–2025 • Top Achiever 2024</p>
+          <a
+            href="https://www.eduvos.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex h-10 items-center justify-center rounded-[999px] border border-[var(--ink)]/20 px-5 text-[14px] hover:border-[var(--ink)]/40"
+          >
+            Visit EDUVOS ↗
+          </a>
+        </div>
+        <div>
+          <h2 className="font-[Polaroid_Script] text-[clamp(36px,6vw,72px)] leading-[0.95] mb-3">My Interests</h2>
+          <p className="text-[var(--ink-muted)]">
+            Beyond design, I draw inspiration from art, music, film and literature. I enjoy watercolour
+            illustration—creating custom pieces that celebrate special moments and keep my eye sharp for color,
+            composition and emotional storytelling.
+          </p>
+        </div>
+      </section>
+
+      {/* Experience grid */}
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 pb-[12vh]">
+        <h2 className="font-[Polaroid_Script] text-[clamp(36px,6vw,72px)] leading-[0.95] mb-6">
+          My Experience
+        </h2>
+        <div className="grid lg:grid-cols-2 gap-[var(--gap)]">
+          <article className="space-y-3">
+            <div className="aspect-[4/3] bg-black/5 rounded-[var(--radius)]" aria-hidden />
+            <h3 className="text-[clamp(20px,2.2vw,28px)] font-semibold">Jimmy's Burger Bar</h3>
+            <p className="text-[var(--ink-muted)]">June 2024 – Present</p>
+            <p className="text-[15px] leading-[1.7]">
+              Lead designer responsible for the brand's visual identity and ongoing marketing content across
+              digital and print.
             </p>
-            
-            <p className="text-sm text-ink/60 max-w-2xl">
-              Proficient in Adobe Creative Suite and digital design tools for comprehensive visual communication.
+            <Link
+              to="/work/jimmys-burger-bar"
+              className="inline-flex h-10 items-center justify-center rounded-[999px] border border-[var(--brand-deep)] px-5 text-[14px] text-[var(--brand-deep)] hover:bg-[var(--brand-deep)] hover:text-[var(--bg-cream)]"
+            >
+              View
+            </Link>
+          </article>
+
+          <article className="space-y-3">
+            <div className="aspect-[4/3] bg-black/5 rounded-[var(--radius)]" aria-hidden />
+            <h3 className="text-[clamp(20px,2.2vw,28px)] font-semibold">JJ Glassworks</h3>
+            <p className="text-[var(--ink-muted)]">January 2025 – Present</p>
+            <p className="text-[15px] leading-[1.7]">
+              Brand refresh & modernisation—updating key identity elements while preserving recognisable brand
+              equity.
             </p>
-          </InViewFade>
-        </Container>
+            <Link
+              to="/work/jj-glassworks"
+              className="inline-flex h-10 items-center justify-center rounded-[999px] border border-[var(--brand-deep)] px-5 text-[14px] text-[var(--brand-deep)] hover:bg-[var(--brand-deep)] hover:text-[var(--bg-cream)]"
+            >
+              View
+            </Link>
+          </article>
+        </div>
       </section>
-
-      {/* Expertise Section */}
-      <section className="py-20 md:py-32 border-t border-line">
-        <Container>
-          <InViewFade>
-            <h2 className="h2 text-accent mb-12">Expertise</h2>
-          </InViewFade>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {expertiseCards.map((item, index) => (
-              <InViewFade key={index} delay={index * 100}>
-                <div className="border border-line p-6 hover:bg-line/30 transition-all duration-250 group">
-                  <div className="w-12 h-12 bg-accent flex items-center justify-center mb-4 transition-transform duration-250 group-hover:scale-110">
-                    <item.icon className="text-white" size={20} />
-                  </div>
-                  <h3 className="text-lg font-normal text-ink mb-2">{item.title}</h3>
-                  <p className="text-sm text-ink/70 leading-relaxed font-light">{item.description}</p>
-                </div>
-              </InViewFade>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Education Section */}
-      <section className="py-20 md:py-32 border-t border-line">
-        <Container>
-          <InViewFade>
-            <h2 className="h2 text-accent mb-12">Education</h2>
-          </InViewFade>
-          
-          <InViewFade delay={100}>
-            <div className="border-t border-b border-line py-8 max-w-2xl">
-              <div className="space-y-3">
-                <p className="text-sm font-medium text-accent uppercase tracking-wide">
-                  2023 – Present
-                </p>
-                <h3 className="text-xl font-normal text-ink">
-                  BA Graphic Design — EDUVOS
-                </h3>
-                <p className="text-ink/70 mb-4 font-light">Currently completing final year of studies.</p>
-                <a
-                  href="https://www.eduvos.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
-                >
-                  Visit EDUVOS →
-                </a>
-              </div>
-            </div>
-          </InViewFade>
-        </Container>
-      </section>
-
-      {/* Interests Section */}
-      <section className="py-20 md:py-32 border-t border-line">
-        <Container>
-          <InViewFade>
-            <h2 className="h2 text-accent mb-8">Interests</h2>
-          </InViewFade>
-          
-          <InViewFade delay={100}>
-            <div className="max-w-3xl">
-              <p className="text-lg leading-relaxed text-ink/80 font-light">
-                Beyond design, I draw inspiration from <strong className="font-normal text-accent">art</strong>, <strong className="font-normal text-accent">music</strong>, <strong className="font-normal text-accent">film</strong>, and <strong className="font-normal text-accent">literature</strong>. I explore watercolour illustration, creating custom greeting cards and artworks that celebrate special moments—keeping my eye sharp for color, composition, and emotional storytelling. 🎨 📚 🎬
-              </p>
-            </div>
-          </InViewFade>
-        </Container>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 md:py-32 border-t border-line bg-line/20">
-        <Container>
-          <InViewFade>
-            <h2 className="h2 text-accent mb-12 text-center">Let's Connect</h2>
-          </InViewFade>
-          
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <InViewFade delay={100}>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                    <span className="text-white text-lg">📞</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-ink/60 mb-1">Phone</p>
-                    <a
-                      href="tel:+27727431971"
-                      className="text-ink hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
-                    >
-                      072 743 1971
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                    <span className="text-white text-lg">✉️</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-ink/60 mb-1">Email</p>
-                    <a
-                      href="mailto:ami1vanzyl@gmail.com"
-                      className="text-ink hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
-                    >
-                      ami1vanzyl@gmail.com
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                    <span className="text-white text-lg">💼</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-ink/60 mb-1">LinkedIn</p>
-                    <a
-                      href="https://linkedin.com/in/ameli-van-zyl-34b506261"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-ink hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
-                    >
-                      linkedin.com/in/ameli-van-zyl-34b506261
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </InViewFade>
-
-            <InViewFade delay={200}>
-              <div className="bg-white border border-line rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-ink mb-4">Available for</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-ink/80">Creative collaborations</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-ink/80">Freelance opportunities</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-ink/80">Full-time design roles</span>
-                  </li>
-                </ul>
-              </div>
-            </InViewFade>
-          </div>
-        </Container>
-      </section>
-    </div>
+    </main>
   );
 }

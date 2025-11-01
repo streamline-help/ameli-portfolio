@@ -1,18 +1,23 @@
 :root {
   /* Colors */
+  --bg-cream: #FAF5EB;
   --cream: #FAF6EF;
-  --ink: #111111;
+  --ink: #0E0E0E;
+  --ink-muted: #5E5E5E;
   --accent: #C23A2B;
+  --brand-deep: #C73E1D;
+  --brand-deep-ink: #7A240F;
   --muted: #8D8D8D;
   --hairline: #E8E2D8;
 
   /* Spacing */
-  --radius: 10px;
+  --radius: 14px;
   --pad-xs: 8px;
   --pad-sm: 14px;
   --pad-md: 24px;
   --pad-lg: 48px;
   --pad-xl: 80px;
+  --gap: clamp(16px, 3vw, 32px);
   
   /* Layout */
   --container-w: 1180px;
@@ -27,7 +32,7 @@
 
 html,
 body {
-  background: var(--cream);
+  background: var(--bg-cream);
   color: var(--ink);
 }
 
