@@ -4,25 +4,25 @@ import InViewFade from '../components/InViewFade';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const instagramPosts = [
-  { id: 1, src: '/images/projects/jimmys/ig-1.webp', alt: "Jimmy's Instagram post 1" },
-  { id: 2, src: '/images/projects/jimmys/ig-2.webp', alt: "Jimmy's Instagram post 2" },
-  { id: 3, src: '/images/projects/jimmys/ig-3.webp', alt: "Jimmy's Instagram post 3" },
-  { id: 4, src: '/images/projects/jimmys/ig-4.webp', alt: "Jimmy's Instagram post 4" },
+  { id: 1, src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=1000&fit=crop', alt: "Jimmy's Instagram post 1" },
+  { id: 2, src: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=1000&fit=crop', alt: "Jimmy's Instagram post 2" },
+  { id: 3, src: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=1000&fit=crop', alt: "Jimmy's Instagram post 3" },
+  { id: 4, src: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=600&h=1000&fit=crop', alt: "Jimmy's Instagram post 4" },
 ];
 
 const sauces = [
-  { id: 1, src: '/images/projects/jimmys/sauce-tomato.webp', alt: 'Tomato', name: 'Tomato' },
-  { id: 2, src: '/images/projects/jimmys/sauce-salad.webp', alt: 'Salad', name: 'Salad' },
-  { id: 3, src: '/images/projects/jimmys/sauce-house.webp', alt: 'House', name: 'House' },
-  { id: 4, src: '/images/projects/jimmys/sauce-jalapeno.webp', alt: 'Jalapeño', name: 'Jalapeño' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1572449102576-55faa12c2c70?w=400&h=600&fit=crop', alt: 'Tomato', name: 'Tomato' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=400&h=600&fit=crop', alt: 'Salad', name: 'Salad' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=400&h=600&fit=crop', alt: 'House', name: 'House' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1596097639314-8f1fe9320db1?w=400&h=600&fit=crop', alt: 'Jalapeño', name: 'Jalapeño' },
 ];
 
 const merchandise = [
-  { id: 1, src: '/images/projects/jimmys/merch-shirt.webp', alt: 'T-shirt' },
-  { id: 2, src: '/images/projects/jimmys/merch-chef-coat.webp', alt: 'Chef coat' },
-  { id: 3, src: '/images/projects/jimmys/merch-cap.webp', alt: 'Cap' },
-  { id: 4, src: '/images/projects/jimmys/merch-hoodie.webp', alt: 'Hoodie' },
-  { id: 5, src: '/images/projects/jimmys/merch-apron.webp', alt: 'Apron' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop', alt: 'T-shirt' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop', alt: 'Chef coat' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&h=600&fit=crop', alt: 'Cap' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop', alt: 'Hoodie' },
+  { id: 5, src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=600&fit=crop', alt: 'Apron' },
 ];
 
 export default function JimmysBurgerBar() {
@@ -66,7 +66,7 @@ export default function JimmysBurgerBar() {
           <InViewFade>
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
               <img
-                src="/images/projects/jimmys/cover.webp"
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600&h=900&fit=crop"
                 alt="Jimmy's Burger Bar hero"
                 loading="lazy"
                 className="w-full h-full object-cover"
@@ -134,7 +134,7 @@ export default function JimmysBurgerBar() {
             <InViewFade>
               <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src="/images/projects/jimmys/menu-hero.webp"
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=800&fit=crop"
                   alt="Menu design"
                   loading="lazy"
                   className="w-full h-full object-cover"
@@ -208,7 +208,7 @@ export default function JimmysBurgerBar() {
             <InViewFade delay={150}>
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/images/projects/jimmys/cap.webp"
+                  src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&h=600&fit=crop"
                   alt="Cap showcase"
                   loading="lazy"
                   className="w-full h-full object-cover"

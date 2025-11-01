@@ -34,7 +34,7 @@ const projectsData: Record<string, ProjectData> = {
     category: "Brand Identity | Print | Social Media",
     timeline: "2024 – Present",
     tagline: "Bold branding for a bold burger experience",
-    heroImage: "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
+    heroImage: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600&h=900&fit=crop",
     overview: "Jimmy's Burger Bar needed a fresh, energetic brand identity that would stand out in the competitive fast-casual dining space. The goal was to create a visual system that felt approachable yet premium, capturing the essence of quality ingredients and bold flavors.",
     objectives: "Develop a comprehensive brand identity including logo, color palette, typography, packaging design, and social media templates that would resonate with a young, food-conscious audience while maintaining broad appeal.",
     details: {
@@ -49,10 +49,10 @@ const projectsData: Record<string, ProjectData> = {
       outcome: "The brand identity successfully positions Jimmy's as a modern, quality-focused burger destination. Social media engagement increased significantly, and the cohesive visual language strengthened brand recognition across all customer touchpoints."
     },
     gallery: [
-      "https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg",
-      "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg",
-      "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg",
-      "https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg"
+      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&h=800&fit=crop"
     ],
     reflection: "This project allowed me to explore the balance between playful brand personality and professional execution. Working closely with the client taught me valuable lessons about translating business values into compelling visual narratives.",
     keyTakeaways: [

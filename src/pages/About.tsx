@@ -39,7 +39,7 @@ export default function About() {
             <InViewFade delay={100}>
               <div className="w-80 h-80 mx-auto">
                 <img
-                  src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
                   alt="Ameli van Zyl"
                   className="w-full h-full object-cover"
                   loading="lazy"

@@ -5,31 +5,31 @@ import ProjectTile from '../components/ProjectTile';
 import SplitSixImageHero from '../components/SplitSixImageHero';
 
 const jimmysImages = [
-  '/images/projects/jimmys/01.jpg',
-  '/images/projects/jimmys/02.jpg',
-  '/images/projects/jimmys/03.jpg',
-  '/images/projects/jimmys/04.jpg',
-  '/images/projects/jimmys/05.jpg',
-  '/images/projects/jimmys/06.jpg',
+  'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1000&fit=crop',
+  'https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&h=1000&fit=crop',
+  'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800&h=1000&fit=crop',
+  'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=1000&fit=crop',
+  'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&h=1000&fit=crop',
+  'https://images.unsplash.com/photo-1615719413546-198b25453f85?w=800&h=1000&fit=crop',
 ];
 
 const featuredProjects = [
   {
     title: "Jimmy's Burger Bar",
     meta: "Brand Identity",
-    image: "/images/projects/jimmys/cover.webp",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop",
     href: "/work/jimmys-burger-bar"
   },
   {
     title: "Habitat: Cosmic Oasis",
     meta: "Advertising / Event",
-    image: "/images/projects/habitat/cover.webp",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
     href: "/work/habitat-cosmic-oasis"
   },
   {
     title: "JJ Glassworks",
     meta: "Brand Identity",
-    image: "/images/projects/jj-glassworks/cover.webp",
+    image: "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=800&h=600&fit=crop",
     href: "/work/jj-glassworks"
   }
 ];
@@ -78,7 +78,7 @@ export default function Home() {
             <InViewFade>
               <div className="w-64 h-64 md:w-80 md:h-80 mx-auto">
                 <img
-                  src="/images/about/portrait.webp"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
                   alt="Ameli van Zyl"
                   loading="lazy"
                   className="w-full h-full object-cover"
