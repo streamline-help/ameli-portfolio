@@ -1,0 +1,129 @@
+.shero6 {
+  position: relative;
+  width: 100%;
+  min-height: min(75vh, 900px);
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.shero6__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 20% 80%, rgba(0, 0, 0, 0.06), transparent 60%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.10) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shero6__grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 1;
+}
+
+.shero6__pane {
+  position: relative;
+  overflow: hidden;
+}
+
+.shero6__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.01);
+  transition: opacity 900ms ease-in-out, transform 900ms ease-in-out;
+}
+
+.shero6__img.is-active {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Opposing micro-pan for life */
+.shero6__pane[data-side="left"] .shero6__img.is-active {
+  transform: scale(1.02) translateX(-0.6%);
+}
+
+.shero6__pane[data-side="right"] .shero6__img.is-active {
+  transform: scale(1.02) translateX(0.6%);
+}
+
+.shero6__overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding-inline: clamp(16px, 4vw, 64px);
+  color: var(--ink);
+}
+
+.shero6__overlay--center {
+  place-items: center;
+  text-align: center;
+}
+
+.shero6__overlay--center-middle {
+  place-items: center;
+  text-align: center;
+  padding: clamp(32px, 6vw, 80px);
+}
+
+.shero6__title {
+  font-family: "Polaroid Script", serif;
+  font-size: clamp(40px, 8vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: white;
+  text-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.6),
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+}
+
+.shero6__quote {
+  font-family: "Helvetica Neue", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin-top: clamp(8px, 1.6vw, 16px);
+  font-size: clamp(16px, 2.2vw, 22px);
+  line-height: 1.4;
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.7),
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    0 9px 18px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.9);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+@media (min-width: 1024px) {
+  .shero6__overlay--center-middle {
+    place-items: center;
+    text-align: center;
+    padding: clamp(48px, 8vw, 120px);
+  }
+}
+
+/* Mobile: stack panes vertically (each 50% height) for editorial feel */
+@media (max-width: 640px) {
+  .shero6__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .shero6__overlay--center-middle {
+    padding: clamp(16px, 4vw, 32px);
+  }
+}
