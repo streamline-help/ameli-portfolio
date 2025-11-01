@@ -43,7 +43,7 @@ export default function Home() {
         subtitle="Chase Perfection. Create Excellence."
       />
 
-      <section className="py-20 md:py-32 border-t border-hairline">
+      <section className="py-20 md:py-32 border-t border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 text-center mb-4 text-accent">Featured Projects</h2>
@@ -71,7 +71,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-t border-hairline">
+      <section className="py-20 md:py-32 border-t border-line">
         <Container>
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
             <InViewFade>
@@ -101,7 +101,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-t border-hairline bg-hairline/20">
+      <section className="py-20 md:py-32 border-t border-line bg-line/20">
         <Container>
           <InViewFade className="text-center">
             <h2 className="h2 mb-8 text-accent">Let's work together.</h2>

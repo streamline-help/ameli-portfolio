@@ -4,17 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#F9F6F2',
+        bg: '#FAF7F3',
         ink: '#111111',
-        'ink-2': '#444444',
-        hairline: '#E6E0DC',
-        accent: '#7A1E1E',
-        accentSecondary: '#B32E2E',
-        'accent-ink': '#FFFFFF',
-        accentHover: '#B32E2E',
-        whiteText: '#FAFAFA',
-        muted: '#F6F7F8',
-        dark: '#1B1B1B',
+        'muted-ink': '#555555',
+        accent: '#A2341F',
+        'accent-600': '#BF3B2B',
+        line: '#E7E3E0',
+        surface: '#FFFFFF',
+        dark: '#1A1A1A',
+        whiteText: '#F5F5F5',
       },
       fontFamily: {
         display: ['Polaroid Script', 'serif'],

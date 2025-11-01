@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-bg border-b border-hairline shadow-sm' : 'bg-bg'
+        isScrolled ? 'bg-bg border-b border-line shadow-sm' : 'bg-bg'
       }`}
     >
       <div className="mx-auto px-6 sm:px-12 lg:px-24 max-w-[1440px]">
@@ -59,7 +59,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-hairline/50 transition-colors focus:outline-none focus:ring-2 focus:ring-accent text-ink"
+            className="md:hidden p-2 rounded-lg hover:bg-line/50 transition-colors focus:outline-none focus:ring-2 focus:ring-accent text-ink"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -68,7 +68,7 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden border-t border-hairline">
+          <div className="md:hidden border-t border-line">
             <nav className="py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
@@ -77,7 +77,7 @@ export default function Header() {
                   className={`block px-4 py-2 rounded-lg transition-colors duration-200 ${
                     isActiveLink(link.path)
                       ? 'text-accent bg-accent/5'
-                      : 'text-ink hover:bg-hairline/50'
+                      : 'text-ink hover:bg-line/50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

@@ -94,7 +94,7 @@ export default function About() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 md:py-32 border-t border-hairline">
+      <section className="py-20 md:py-32 border-t border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 text-accent mb-12">Experience</h2>
@@ -109,7 +109,7 @@ export default function About() {
       </section>
 
       {/* Software Skills Section */}
-      <section className="py-20 md:py-32 border-t border-hairline">
+      <section className="py-20 md:py-32 border-t border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 text-accent mb-8">Software Skills</h2>
@@ -128,7 +128,7 @@ export default function About() {
       </section>
 
       {/* Expertise Section */}
-      <section className="py-20 md:py-32 border-t border-hairline">
+      <section className="py-20 md:py-32 border-t border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 text-accent mb-12">Expertise</h2>
@@ -137,7 +137,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {expertiseCards.map((item, index) => (
               <InViewFade key={index} delay={index * 100}>
-                <div className="border border-hairline p-6 hover:bg-hairline/30 transition-all duration-250 group">
+                <div className="border border-line p-6 hover:bg-line/30 transition-all duration-250 group">
                   <div className="w-12 h-12 bg-accent flex items-center justify-center mb-4 transition-transform duration-250 group-hover:scale-110">
                     <item.icon className="text-white" size={20} />
                   </div>
@@ -151,14 +151,14 @@ export default function About() {
       </section>
 
       {/* Education Section */}
-      <section className="py-20 md:py-32 border-t border-hairline">
+      <section className="py-20 md:py-32 border-t border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 text-accent mb-12">Education</h2>
           </InViewFade>
           
           <InViewFade delay={100}>
-            <div className="border-t border-b border-hairline py-8 max-w-2xl">
+            <div className="border-t border-b border-line py-8 max-w-2xl">
               <div className="space-y-3">
                 <p className="text-sm font-medium text-accent uppercase tracking-wide">
                   2023 – Present
@@ -182,7 +182,7 @@ export default function About() {
       </section>
 
       {/* Interests Section */}
-      <section className="py-20 md:py-32 border-t border-hairline">
+      <section className="py-20 md:py-32 border-t border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 text-accent mb-8">Interests</h2>
@@ -199,7 +199,7 @@ export default function About() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 md:py-32 border-t border-hairline bg-hairline/20">
+      <section className="py-20 md:py-32 border-t border-line bg-line/20">
         <Container>
           <InViewFade>
             <h2 className="h2 text-accent mb-12 text-center">Let's Connect</h2>
@@ -258,7 +258,7 @@ export default function About() {
             </InViewFade>
 
             <InViewFade delay={200}>
-              <div className="bg-white border border-hairline rounded-2xl p-8">
+              <div className="bg-white border border-line rounded-2xl p-8">
                 <h3 className="text-xl font-semibold text-ink mb-4">Available for</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">

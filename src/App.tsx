@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -8,6 +9,23 @@ import ProjectDetail from './pages/ProjectDetail';
 import JimmysBurgerBar from './pages/JimmysBurgerBar';
 
 function App() {
+  useEffect(() => {
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const els = [...document.querySelectorAll('.reveal')];
+      const io = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-visible');
+              io.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.14 }
+      );
+      els.forEach((el) => io.observe(el));
+    }
+  }, []);
+
   return (
     <Router>
       <Layout>

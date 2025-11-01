@@ -13,7 +13,7 @@ export default function FilterChips({ filters, activeFilter, onFilterChange }: F
           <button
             key={filter}
             onClick={() => onFilterChange(filter)}
-            className={`px-4 py-2 text-sm border border-hairline rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-2 ${
+            className={`px-4 py-2 text-sm border border-line rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-2 ${
               isActive
                 ? 'text-accent bg-accent/5 border-accent'
                 : 'text-ink bg-bg hover:border-ink/30'

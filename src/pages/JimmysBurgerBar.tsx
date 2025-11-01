@@ -28,7 +28,7 @@ const merchandise = [
 export default function JimmysBurgerBar() {
   return (
     <div className="bg-bg">
-      <section className="py-20 md:py-32 border-b border-hairline">
+      <section className="py-20 md:py-32 border-b border-line">
         <Container>
           <InViewFade>
             <h1 className="h1 mb-8">Jimmy's Burger Bar</h1>
@@ -61,7 +61,7 @@ export default function JimmysBurgerBar() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-b border-hairline">
+      <section className="py-20 md:py-32 border-b border-line">
         <Container>
           <InViewFade>
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
@@ -76,7 +76,7 @@ export default function JimmysBurgerBar() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-b border-hairline">
+      <section className="py-20 md:py-32 border-b border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 mb-12">Instagram</h2>
@@ -99,7 +99,7 @@ export default function JimmysBurgerBar() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-b border-hairline">
+      <section className="py-20 md:py-32 border-b border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 mb-6 text-center">Sauce Collection</h2>
@@ -128,7 +128,7 @@ export default function JimmysBurgerBar() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-b border-hairline">
+      <section className="py-20 md:py-32 border-b border-line">
         <Container>
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <InViewFade>
@@ -152,7 +152,7 @@ export default function JimmysBurgerBar() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-b border-hairline">
+      <section className="py-20 md:py-32 border-b border-line">
         <Container>
           <InViewFade>
             <h2 className="h2 mb-12">Merchandise</h2>
@@ -175,7 +175,7 @@ export default function JimmysBurgerBar() {
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-b border-hairline">
+      <section className="py-20 md:py-32 border-b border-line">
         <Container>
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
             <InViewFade>
@@ -196,7 +196,7 @@ export default function JimmysBurgerBar() {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded bg-white border border-hairline" />
+                  <div className="w-16 h-16 rounded bg-white border border-line" />
                   <div>
                     <p className="font-medium text-ink">White</p>
                     <p className="text-sm text-ink/60">#FFFFFF</p>
@@ -229,7 +229,7 @@ export default function JimmysBurgerBar() {
           </InViewFade>
 
           <InViewFade>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-12 border-t border-hairline">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-12 border-t border-line">
               <Link
                 to="/work"
                 className="inline-flex items-center gap-2 text-chocolateCosmos hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"

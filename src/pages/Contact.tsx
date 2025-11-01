@@ -55,8 +55,8 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-bg border border-hairline rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 outline-none"
-                    className="w-full px-4 py-3 bg-bg border border-hairline rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-line rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-line rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 outline-none"
                     placeholder="Your name"
                   />
                 </div>
@@ -72,8 +72,8 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-bg border border-hairline rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 outline-none"
-                    className="w-full px-4 py-3 bg-bg border border-hairline rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-line rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-line rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 outline-none"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -89,8 +89,8 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-bg border border-hairline rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 resize-none outline-none"
-                    className="w-full px-4 py-3 bg-bg border border-hairline rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-line rounded focus:ring-2 focus:ring-chocolateCosmos focus:border-transparent transition-all duration-200 resize-none outline-none"
+                    className="w-full px-4 py-3 bg-bg border border-line rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none outline-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -121,8 +121,8 @@ export default function Contact() {
                       href="https://www.linkedin.com/in/ameli-van-zyl-34b506261/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-chocolateCosmos hover:text-bg hover:border-chocolateCosmos transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
-                      className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-accent hover:text-white hover:border-accent transition-all duration-200 ease-refined hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent"
+                      className="w-11 h-11 flex items-center justify-center border border-line rounded-full hover:bg-chocolateCosmos hover:text-bg hover:border-chocolateCosmos transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
+                      className="w-11 h-11 flex items-center justify-center border border-line rounded-full hover:bg-accent hover:text-white hover:border-accent transition-all duration-200 ease-refined hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent"
                       aria-label="LinkedIn"
                     >
                       <Linkedin size={20} />
@@ -131,8 +131,8 @@ export default function Contact() {
                       href="https://www.instagram.com/ameli.graphics/profilecard/?igsh=MTY0a3pjdGh0OGx5OQ%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-chocolateCosmos hover:text-bg hover:border-chocolateCosmos transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
-                      className="w-11 h-11 flex items-center justify-center border border-hairline rounded-full hover:bg-accent hover:text-white hover:border-accent transition-all duration-200 ease-refined hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent"
+                      className="w-11 h-11 flex items-center justify-center border border-line rounded-full hover:bg-chocolateCosmos hover:text-bg hover:border-chocolateCosmos transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
+                      className="w-11 h-11 flex items-center justify-center border border-line rounded-full hover:bg-accent hover:text-white hover:border-accent transition-all duration-200 ease-refined hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent"
                       aria-label="Instagram"
                     >
                       <Instagram size={20} />

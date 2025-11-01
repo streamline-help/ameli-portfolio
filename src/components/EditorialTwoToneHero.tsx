@@ -29,7 +29,7 @@ export default function EditorialTwoToneHero({
   return (
     <section className="min-h-[85vh] grid lg:grid-cols-2">
       {/* Left: Image with crossfade */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-hairline/30 to-transparent">
+      <div className="relative overflow-hidden bg-gradient-to-br from-line/30 to-transparent">
         {images.map((image, index) => (
           <div
             key={index}
@@ -61,4 +61,5 @@ export default function EditorialTwoToneHero({
     </section>
   );
 }
+
 

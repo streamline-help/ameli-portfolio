@@ -19,7 +19,7 @@ export default function ProjectTile({ title, meta, image, href, alt }: ProjectTi
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-hairline/30">
+      <div className="relative aspect-[4/3] overflow-hidden bg-line/30">
         <img
           src={image}
           alt={alt || title}
