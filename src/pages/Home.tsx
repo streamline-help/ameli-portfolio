@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import InViewFade from '../components/InViewFade';
 import ProjectTile from '../components/ProjectTile';
+import SplitSixImageHero from '../components/SplitSixImageHero';
+
+const jimmysImages = [
+  '/images/projects/jimmys/01.jpg',
+  '/images/projects/jimmys/02.jpg',
+  '/images/projects/jimmys/03.jpg',
+  '/images/projects/jimmys/04.jpg',
+  '/images/projects/jimmys/05.jpg',
+  '/images/projects/jimmys/06.jpg',
+];
 
 const featuredProjects = [
   {
@@ -27,32 +37,12 @@ const featuredProjects = [
 export default function Home() {
   return (
     <div className="bg-bg">
-      <section className="min-h-[85vh] flex items-center">
-        <Container className="py-20 md:py-32">
-          <InViewFade className="max-w-3xl">
-            <h1 className="altTitle text-[clamp(44px,7vw,116px)] leading-[0.95] tracking-[-0.01em] mb-6">
-              Design with purpose.
-            </h1>
-            <p className="text-lg md:text-xl text-ink/70 leading-relaxed mb-10 max-w-[55ch]">
-              Brand identity, print, and digital—crafted with clarity.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/work"
-                className="px-8 py-3 border border-chocolateCosmos text-chocolateCosmos rounded-full hover:bg-chocolateCosmos hover:text-bg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
-              >
-                View Work
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-3 text-ink hover:text-chocolateCosmos transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
-              >
-                Contact
-              </Link>
-            </div>
-          </InViewFade>
-        </Container>
-      </section>
+      <SplitSixImageHero
+        images={jimmysImages}
+        title="Ameli van Zyl"
+        quote="Chase perfection. Create excellence."
+        titleClass="altTitle"
+      />
 
       <section className="py-20 md:py-32 border-t border-hairline">
         <Container>
