@@ -1,20 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { path: '/', label: 'Home' },
@@ -28,67 +18,50 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-bg border-b border-line shadow-sm' : 'bg-bg'
-      }`}
-    >
-      <div className="mx-auto px-6 sm:px-12 lg:px-24 max-w-[1440px]">
-        <div className="flex justify-between items-center py-5">
-          <Link
-            to="/"
-            className="font-display text-2xl text-ink hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
-          >
+    <nav className="navbar w-full bg-[#E6E6E6]">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-10 h-[68px] flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2">
+          <span className="font-[Polaroid_Script] text-2xl text-ink hover:text-[var(--brand)] transition-colors duration-200">
             Ameli van Zyl
-          </Link>
-
-          <nav className="nav hidden md:flex gap-8">
+          </span>
+        </Link>
+        <div className="flex items-center gap-2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`nav-link ${isActiveLink(link.path) ? 'text-[var(--brand)]' : ''}`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        <button
+          className="md:hidden p-2 rounded-lg hover:bg-black/10 transition-colors text-ink"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+      {isMenuOpen && (
+        <div className="md:hidden border-t border-black/10 bg-[#E6E6E6]">
+          <nav className="py-4 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                aria-current={isActiveLink(link.path) ? 'page' : undefined}
-                className={`text-[17px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 ${
-                  isActiveLink(link.path)
-                    ? 'text-accent'
-                    : 'text-ink hover:text-accent'
+                className={`block px-4 py-2 nav-link text-ink hover:text-[var(--brand)] ${
+                  isActiveLink(link.path) ? 'text-[var(--brand)]' : ''
                 }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-
-          <button
-            className="md:hidden p-2 rounded-lg hover:bg-line/50 transition-colors focus:outline-none focus:ring-2 focus:ring-accent text-ink"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {isMenuOpen && (
-          <div className="md:hidden border-t border-line">
-            <nav className="py-4 space-y-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`block px-4 py-2 rounded-lg transition-colors duration-200 ${
-                    isActiveLink(link.path)
-                      ? 'text-accent bg-accent/5'
-                      : 'text-ink hover:bg-line/50'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        )}
-      </div>
-    </header>
+      )}
+    </nav>
   );
 }

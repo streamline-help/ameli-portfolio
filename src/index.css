@@ -1,23 +1,4 @@
 @import './styles/tokens.css';
-
-/* Note: Font files should be placed in public/fonts/ */
-/* Download from: https://madfonts.com/polaroid-script-font/ */
-@font-face {
-  font-family: "Polaroid Script";
-  src: url("/fonts/PolaroidScript.otf") format("opentype"),
-       url("/fonts/PolaroidScript.woff2") format("woff2"),
-       url("/fonts/PolaroidScript.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Aesthetic Moment";
-  src: url("/fonts/AestheticMoment.otf") format("opentype"),
-       url("/fonts/AestheticMoment.woff2") format("woff2"),
-       url("/fonts/AestheticMoment.woff") format("woff");
-  font-display: swap;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
