@@ -232,7 +232,7 @@ export default function JimmysBurgerBar() {
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-12 border-t border-hairline">
               <Link
                 to="/work"
-                className="inline-flex items-center gap-2 text-chocolateCosmos hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                className="relative inline-flex items-center gap-2 text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
               >
                 <ArrowLeft size={20} />
                 Back to Work
@@ -240,7 +240,7 @@ export default function JimmysBurgerBar() {
 
               <Link
                 to="/work/habitat-cosmic-oasis"
-                className="inline-flex items-center gap-2 text-chocolateCosmos hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+                className="relative inline-flex items-center gap-2 text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
               >
                 Next Project
                 <ArrowRight size={20} />
