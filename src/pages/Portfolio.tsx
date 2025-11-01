@@ -63,8 +63,8 @@ export default function Portfolio() {
       <section className="py-20 md:py-32">
         <Container>
           <InViewFade>
-            <h1 className="h1 text-center mb-6">Work</h1>
-            <p className="text-center text-lg text-ink/60 mb-12 max-w-2xl mx-auto">
+            <h1 className="h1 text-accent text-center mb-6">Work</h1>
+            <p className="text-center text-lg text-ink/70 mb-12 max-w-2xl mx-auto font-light">
               A selection of projects exploring branding, advertising, and creative design.
             </p>
           </InViewFade>
@@ -77,9 +77,9 @@ export default function Portfolio() {
             />
           </InViewFade>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {filteredProjects.map((project, index) => (
-              <InViewFade key={project.href} delay={index * 80}>
+              <InViewFade key={project.href} delay={index * 100}>
                 <ProjectTile {...project} />
               </InViewFade>
             ))}

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import InViewFade from '../components/InViewFade';
 import ProjectTile from '../components/ProjectTile';
-import SplitSixImageHero from '../components/SplitSixImageHero';
+import EditorialTwoToneHero from '../components/EditorialTwoToneHero';
 
 const jimmysImages = [
   'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=1000&fit=crop',
@@ -37,24 +37,22 @@ const featuredProjects = [
 export default function Home() {
   return (
     <div className="bg-bg">
-      <SplitSixImageHero
+      <EditorialTwoToneHero
         images={jimmysImages}
         title="Ameli van Zyl"
-        quote="Chase perfection. Create excellence."
-        titleClass="altTitle"
-        align="center-middle"
+        subtitle="Chase Perfection. Create Excellence."
       />
 
       <section className="py-20 md:py-32 border-t border-hairline">
         <Container>
           <InViewFade>
-            <h2 className="h2 text-center mb-4">Featured Projects</h2>
-            <p className="text-center text-ink/60 mb-16 max-w-2xl mx-auto">
+            <h2 className="h2 text-center mb-4 text-accent">Featured Projects</h2>
+            <p className="text-center text-ink/70 mb-16 max-w-2xl mx-auto font-light tracking-wide">
               A quick look at selected work.
             </p>
           </InViewFade>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16 max-w-5xl mx-auto">
             {featuredProjects.map((project, index) => (
               <InViewFade key={project.href} delay={index * 100}>
                 <ProjectTile {...project} />
@@ -65,9 +63,9 @@ export default function Home() {
           <InViewFade className="text-center">
             <Link
               to="/work"
-              className="inline-block px-7 py-3 border-2 border-accent text-accent rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accent hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/40"
+              className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
             >
-              View All Work
+              View All Work →
             </Link>
           </InViewFade>
         </Container>
@@ -88,37 +86,37 @@ export default function Home() {
             </InViewFade>
 
             <InViewFade delay={150}>
-              <h2 className="h2 mb-6">About Me</h2>
-              <p className="text-lg text-ink/70 leading-relaxed mb-8 max-w-[50ch]">
+              <h2 className="h2 mb-6 text-accent">About Me</h2>
+              <p className="text-lg text-ink/80 leading-relaxed mb-8 max-w-[50ch] font-light">
                 I create purposeful, detail-driven design that's clear, engaging, and brand-true.
               </p>
               <Link
                 to="/about"
-                className="relative inline-block text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
+                className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
               >
-                Learn More
+                Learn More →
               </Link>
             </InViewFade>
           </div>
         </Container>
       </section>
 
-      <section className="py-20 md:py-32 border-t border-hairline bg-hairline/30">
+      <section className="py-20 md:py-32 border-t border-hairline bg-hairline/20">
         <Container>
           <InViewFade className="text-center">
-            <h2 className="h2 mb-8">Let's work together.</h2>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <h2 className="h2 mb-8 text-accent">Let's work together.</h2>
+            <div className="flex flex-wrap gap-6 justify-center">
               <Link
                 to="/contact"
-                className="px-7 py-3 bg-accent text-white rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accentHover hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent/40"
+                className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
               >
-                Get in touch
+                Get in touch →
               </Link>
               <Link
                 to="/work"
-                className="px-7 py-3 border-2 border-accent text-accent rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accent hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent/40"
+                className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
               >
-                View all work
+                View all work →
               </Link>
             </div>
           </InViewFade>

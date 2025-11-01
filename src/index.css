@@ -16,26 +16,29 @@
 
 @layer base {
   :root {
-    --bg: #FFFFFF;
+    --bg: #F9F6F2;
     --ink: #111111;
     --ink-2: #444444;
-    --hairline: #E6E4E0;
-    --accent: #D9481E;
+    --hairline: #E6E0DC;
+    --accent: #7A1E1E;
+    --accent-secondary: #B32E2E;
     --accent-ink: #FFFFFF;
-    --accent-hover: #E0521F;
+    --accent-hover: #B32E2E;
     --white-text: #FAFAFA;
     --muted: #F6F7F8;
+    --dark: #1B1B1B;
     --radius: 18px;
   }
 
   html,
   body {
-    background: #FFFFFF;
+    background: #F9F6F2;
     color: #111111;
+    scroll-behavior: smooth;
   }
 
   ::selection {
-    background: #D9481E;
+    background: #7A1E1E;
     color: white;
   }
 }

@@ -19,16 +19,18 @@ export default function ProjectTile({ title, meta, image, href, alt }: ProjectTi
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden bg-hairline/30">
         <img
           src={image}
           alt={alt || title}
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-500 ease-refined group-hover:scale-[1.02]"
+          className={`w-full h-full object-cover transition-all duration-700 ${
+            isHovered ? 'grayscale-0 scale-[1.02]' : 'grayscale'
+          }`}
         />
         <div
-          className={`absolute inset-0 bg-ink transition-opacity duration-300 ${
-            isHovered ? 'opacity-15' : 'opacity-0'
+          className={`absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent transition-opacity duration-300 ${
+            isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         />
         <div
@@ -36,8 +38,10 @@ export default function ProjectTile({ title, meta, image, href, alt }: ProjectTi
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <h3 className="font-display text-3xl md:text-4xl text-whiteText mb-1">{title}</h3>
-          {meta && <p className="text-whiteText/90 text-sm">{meta}</p>}
+          <h3 className="font-display text-2xl md:text-3xl text-whiteText mb-1 font-normal tracking-tight">
+            {title}
+          </h3>
+          {meta && <p className="text-whiteText/90 text-sm font-light tracking-wide">{meta}</p>}
         </div>
       </div>
     </Link>

@@ -56,25 +56,20 @@ export default function About() {
       <section className="py-20 md:py-32">
         <Container>
           <InViewFade>
-            <h1 className="h1 text-center mb-16">About Me</h1>
+            <h1 className="h1 text-accent text-center mb-16">About Me</h1>
           </InViewFade>
           
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
             {/* Profile Image */}
             <InViewFade>
               <div className="flex justify-center lg:justify-start">
-                <div className="relative">
-                  <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl">
-                    <img
-                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
-                      alt="Ameli van Zyl portrait"
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent rounded-full flex items-center justify-center shadow-lg">
-                    <Palette className="text-white" size={32} />
-                  </div>
+                <div className="w-80 h-80 md:w-96 md:h-96">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
+                    alt="Ameli van Zyl portrait"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </InViewFade>
@@ -82,16 +77,15 @@ export default function About() {
             {/* Intro Content */}
             <InViewFade delay={150}>
               <div className="text-center lg:text-left space-y-6">
-                <p className="text-lg leading-relaxed text-ink/80">
+                <p className="text-lg leading-relaxed text-ink/80 font-light">
                   I'm Ameli van Zyl, a dedicated graphic designer currently completing my BA in Graphic Design at EDUVOS. I craft visually striking, detail-driven work that balances creativity with clear purpose. My focus is refined, high-quality design that communicates effectively and leaves a lasting impression.
                 </p>
                 
                 <Link
                   to="/work"
-                  className="inline-flex items-center gap-2 px-7 py-3 bg-accent text-white rounded-lg font-medium tracking-wide transition-all duration-200 ease-refined hover:bg-accentHover hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent/40"
+                  className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
                 >
-                  View My Portfolio
-                  <ArrowRight size={18} />
+                  View My Portfolio →
                 </Link>
               </div>
             </InViewFade>
@@ -103,7 +97,7 @@ export default function About() {
       <section className="py-20 md:py-32 border-t border-hairline">
         <Container>
           <InViewFade>
-            <h2 className="h2 mb-12">Experience</h2>
+            <h2 className="h2 text-accent mb-12">Experience</h2>
           </InViewFade>
           
           <InViewFade delay={100}>
@@ -118,19 +112,13 @@ export default function About() {
       <section className="py-20 md:py-32 border-t border-hairline">
         <Container>
           <InViewFade>
-            <h2 className="h2 mb-8">Software Skills</h2>
+            <h2 className="h2 text-accent mb-8">Software Skills</h2>
           </InViewFade>
           
           <InViewFade delay={100}>
-            <div className="flex flex-wrap gap-3 mb-6">
-              {softwareSkills.map((skill, index) => (
-                <InViewFade key={skill} delay={index * 50}>
-                  <span className="px-4 py-2 bg-hairline/50 text-ink rounded-full font-medium hover:bg-accent hover:text-white transition-all duration-200 cursor-default">
-                    {skill}
-                  </span>
-                </InViewFade>
-              ))}
-            </div>
+            <p className="text-lg text-ink/80 font-light tracking-wide mb-8">
+              {softwareSkills.join(' / ')}
+            </p>
             
             <p className="text-sm text-ink/60 max-w-2xl">
               Proficient in Adobe Creative Suite and digital design tools for comprehensive visual communication.
@@ -143,18 +131,18 @@ export default function About() {
       <section className="py-20 md:py-32 border-t border-hairline">
         <Container>
           <InViewFade>
-            <h2 className="h2 mb-12">Expertise</h2>
+            <h2 className="h2 text-accent mb-12">Expertise</h2>
           </InViewFade>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {expertiseCards.map((item, index) => (
               <InViewFade key={index} delay={index * 100}>
-                <div className="bg-white border border-hairline rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+                <div className="border border-hairline p-6 hover:bg-hairline/30 transition-all duration-250 group">
+                  <div className="w-12 h-12 bg-accent flex items-center justify-center mb-4 transition-transform duration-250 group-hover:scale-110">
                     <item.icon className="text-white" size={20} />
                   </div>
-                  <h3 className="text-lg font-semibold text-ink mb-2">{item.title}</h3>
-                  <p className="text-sm text-ink/70 leading-relaxed">{item.description}</p>
+                  <h3 className="text-lg font-normal text-ink mb-2">{item.title}</h3>
+                  <p className="text-sm text-ink/70 leading-relaxed font-light">{item.description}</p>
                 </div>
               </InViewFade>
             ))}
@@ -166,26 +154,26 @@ export default function About() {
       <section className="py-20 md:py-32 border-t border-hairline">
         <Container>
           <InViewFade>
-            <h2 className="h2 mb-12">Education</h2>
+            <h2 className="h2 text-accent mb-12">Education</h2>
           </InViewFade>
           
           <InViewFade delay={100}>
-            <div className="bg-white border border-hairline rounded-2xl p-8 max-w-2xl shadow-sm">
+            <div className="border-t border-b border-hairline py-8 max-w-2xl">
               <div className="space-y-3">
                 <p className="text-sm font-medium text-accent uppercase tracking-wide">
                   2023 – Present
                 </p>
-                <h3 className="text-xl font-semibold text-ink">
-                  <span className="border-b-2 border-accent pb-1">BA Graphic Design</span> — EDUVOS
+                <h3 className="text-xl font-normal text-ink">
+                  BA Graphic Design — EDUVOS
                 </h3>
-                <p className="text-ink/70 mb-4">Currently completing final year of studies.</p>
+                <p className="text-ink/70 mb-4 font-light">Currently completing final year of studies.</p>
                 <a
                   href="https://www.eduvos.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-accent hover:text-accentHover transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
+                  className="relative inline-block text-accent font-light tracking-wide transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-px after:bg-accent after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
                 >
-                  Visit EDUVOS <ExternalLink size={16} />
+                  Visit EDUVOS →
                 </a>
               </div>
             </div>
@@ -197,13 +185,13 @@ export default function About() {
       <section className="py-20 md:py-32 border-t border-hairline">
         <Container>
           <InViewFade>
-            <h2 className="h2 mb-8">Interests</h2>
+            <h2 className="h2 text-accent mb-8">Interests</h2>
           </InViewFade>
           
           <InViewFade delay={100}>
             <div className="max-w-3xl">
-              <p className="text-lg leading-relaxed text-ink/80">
-                Beyond design, I draw inspiration from <strong className="text-accent">art</strong>, <strong className="text-accent">music</strong>, <strong className="text-accent">film</strong>, and <strong className="text-accent">literature</strong>. I explore watercolour illustration, creating custom greeting cards and artworks that celebrate special moments—keeping my eye sharp for color, composition, and emotional storytelling. 🎨 📚 🎬
+              <p className="text-lg leading-relaxed text-ink/80 font-light">
+                Beyond design, I draw inspiration from <strong className="font-normal text-accent">art</strong>, <strong className="font-normal text-accent">music</strong>, <strong className="font-normal text-accent">film</strong>, and <strong className="font-normal text-accent">literature</strong>. I explore watercolour illustration, creating custom greeting cards and artworks that celebrate special moments—keeping my eye sharp for color, composition, and emotional storytelling. 🎨 📚 🎬
               </p>
             </div>
           </InViewFade>
@@ -211,10 +199,10 @@ export default function About() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 md:py-32 border-t border-hairline bg-hairline/30">
+      <section className="py-20 md:py-32 border-t border-hairline bg-hairline/20">
         <Container>
           <InViewFade>
-            <h2 className="h2 mb-12 text-center">Let's Connect</h2>
+            <h2 className="h2 text-accent mb-12 text-center">Let's Connect</h2>
           </InViewFade>
           
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
