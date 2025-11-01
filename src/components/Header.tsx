@@ -30,14 +30,14 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-bg border-b border-hairline shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-ink border-b border-white/10 shadow-sm' : 'bg-ink'
       }`}
     >
       <div className="mx-auto px-6 sm:px-12 lg:px-24 max-w-[1440px]">
         <div className="flex justify-between items-center py-5">
           <Link
             to="/"
-            className="font-display text-2xl text-ink hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
+            className="font-display text-2xl text-white hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4"
           >
             Ameli van Zyl
           </Link>
@@ -50,7 +50,7 @@ export default function Header() {
                 className={`text-[17px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4 rounded-sm ${
                   isActiveLink(link.path)
                     ? 'text-accent underline decoration-1 underline-offset-4'
-                    : 'text-ink hover:text-accent'
+                    : 'text-white hover:text-accent'
                 }`}
               >
                 {link.label}
@@ -59,7 +59,7 @@ export default function Header() {
           </nav>
 
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-hairline transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
+            className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-accent text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -68,7 +68,7 @@ export default function Header() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden border-t border-hairline">
+          <div className="md:hidden border-t border-white/10">
             <nav className="py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
@@ -77,7 +77,7 @@ export default function Header() {
                   className={`block px-4 py-2 rounded-lg transition-colors duration-200 ${
                     isActiveLink(link.path)
                       ? 'text-accent bg-accent/5'
-                      : 'text-ink hover:bg-hairline'
+                      : 'text-white hover:bg-white/10'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
