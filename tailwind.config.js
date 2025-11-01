@@ -4,12 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#FFFDF8',
+        bg: '#FFFFFF',
         ink: '#111111',
+        'ink-2': '#444444',
         hairline: '#E6E4E0',
-        accent: '#D24B1A',
+        accent: '#D9481E',
+        'accent-ink': '#FFFFFF',
         accentHover: '#E0521F',
         whiteText: '#FAFAFA',
+        muted: '#F6F7F8',
       },
       fontFamily: {
         display: ['Polaroid Script', 'serif'],
