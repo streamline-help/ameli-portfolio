@@ -13,6 +13,9 @@
   --pad-md: 24px;
   --pad-lg: 48px;
   --pad-xl: 80px;
+  
+  /* Layout */
+  --container-w: 1180px;
 
   /* Typography */
   --h1: clamp(48px, 7vw, 116px);

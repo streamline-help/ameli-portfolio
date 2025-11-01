@@ -10,8 +10,13 @@ export default function HeroMinimal() {
       </div>
 
       <div className="hero-min__grid">
-        <div className="hero-min__quote title">
-          CHASE PERFECTION.<br/>CREATE EXCELLENCE.
+        <div className="hero-min__quote-wrapper">
+          <div className="hero-min__quote title">
+            CHASE PERFECTION.<br/>CREATE EXCELLENCE.
+          </div>
+          <div className="hero-min__cta">
+            <a className="btn btn--accent" href="/work">See my work</a>
+          </div>
         </div>
 
         <div className="hero-min__image" aria-hidden="true">
@@ -19,9 +24,6 @@ export default function HeroMinimal() {
         </div>
       </div>
 
-      <div className="hero-min__cta">
-        <a className="btn btn--accent" href="/work">See my work</a>
-      </div>
       <hr />
     </section>
   );
