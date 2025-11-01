@@ -6,7 +6,7 @@ interface SplitSixImageHeroProps {
   title?: string;
   quote?: string;
   intervalMs?: number;
-  align?: 'center' | 'bottom-left';
+  align?: 'center' | 'center-middle' | 'bottom-left';
   titleClass?: string;
 }
 
