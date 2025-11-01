@@ -32,12 +32,17 @@ export default function SplitSixImageHero({
 
     if (leftImages.length === 0 || rightImages.length === 0) return;
 
-    let currentIndex = 0;
+    let currentLeftIndex = 0;
+    let currentRightIndex = 0;
+    let isLeftTurn = true;
 
-    const show = (index: number) => {
+    const showLeft = (index: number) => {
       leftImages.forEach((el, k) => {
         el.classList.toggle('is-active', k === index);
       });
+    };
+
+    const showRight = (index: number) => {
       rightImages.forEach((el, k) => {
         el.classList.toggle('is-active', k === index);
       });
@@ -47,13 +52,20 @@ export default function SplitSixImageHero({
       '(prefers-motion: reduce)'
     ).matches;
 
-    show(0);
+    showLeft(0);
+    showRight(0);
 
     if (prefersReducedMotion) return;
 
     const interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % leftImages.length;
-      show(currentIndex);
+      if (isLeftTurn) {
+        currentLeftIndex = (currentLeftIndex + 1) % leftImages.length;
+        showLeft(currentLeftIndex);
+      } else {
+        currentRightIndex = (currentRightIndex + 1) % rightImages.length;
+        showRight(currentRightIndex);
+      }
+      isLeftTurn = !isLeftTurn;
     }, intervalMs);
 
     return () => clearInterval(interval);
