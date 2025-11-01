@@ -1,5 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: "Polaroid Script";
+  src: url("/fonts/PolaroidScript.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aesthetic Moment";
+  src: url("/fonts/AestheticMoment.otf") format("opentype");
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #FFFFFF;
+    --ink: #111111;
+    --hairline: #EDEDED;
+    --accent-1: #58111A;
+    --accent-2: #65000B;
+  }
+
+  html,
+  body {
+    background: #FFFFFF;
+    color: #111111;
+  }
+}
+
+@layer utilities {
+  .h1 {
+    font-family: "Polaroid Script", serif;
+    font-size: clamp(44px, 7vw, 116px);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+  }
+
+  .h2 {
+    font-family: "Polaroid Script", serif;
+    font-size: clamp(32px, 5vw, 72px);
+    line-height: 1.25;
+  }
+
+  .altTitle {
+    font-family: "Aesthetic Moment", serif;
+  }
+}

@@ -4,32 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#FFF9E6',
-        accent: '#E64519',
+        bg: '#FFFFFF',
+        ink: '#111111',
+        hairline: '#EDEDED',
+        chocolateCosmos: '#58111A',
+        rosewood: '#65000B',
       },
       fontFamily: {
-        script: ['Lobster Two', 'cursive'],
-        sans: ['Inter', 'sans-serif'],
+        display: ['Polaroid Script', 'serif'],
+        alt: ['Aesthetic Moment', 'serif'],
+        sans: ['Helvetica Neue', 'Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
       animation: {
-        'fade-up': 'fadeUp 0.8s ease-out forwards',
-        'slide-down': 'slideDown 0.3s ease-out',
+        'in-view': 'inView 0.26s ease-out forwards',
       },
       keyframes: {
-        fadeUp: {
+        inView: {
           '0%': {
             opacity: '0',
-            transform: 'translateY(30px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-        slideDown: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(-10px)',
+            transform: 'translateY(32px)',
           },
           '100%': {
             opacity: '1',

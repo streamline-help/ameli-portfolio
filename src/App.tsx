@@ -13,10 +13,12 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Portfolio />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects/jimmys-burger-bar" element={<JimmysBurgerBar />} />
+          <Route path="/work/jimmys-burger-bar" element={<JimmysBurgerBar />} />
+          <Route path="/work/:slug" element={<ProjectDetail />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
         </Routes>
       </Layout>

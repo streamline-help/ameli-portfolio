@@ -1,39 +1,56 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/portfolio', label: 'Portfolio' },
+    { path: '/work', label: 'Work' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
   ];
 
   const isActiveLink = (path: string) => {
-    return location.pathname === path;
+    return location.pathname === path || (path === '/work' && location.pathname.startsWith('/work'));
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-cream shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-script text-accent font-bold hover:scale-105 transition-transform duration-200">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-bg border-b border-hairline shadow-sm' : 'bg-transparent'
+      }`}
+    >
+      <div className="mx-auto px-6 sm:px-12 lg:px-24 max-w-[1440px]">
+        <div className="flex justify-between items-center py-5">
+          <Link
+            to="/"
+            className="font-display text-2xl text-ink hover:text-chocolateCosmos transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
+          >
             Ameli van Zyl
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-black hover:text-accent transition-colors duration-200 font-medium ${
-                  isActiveLink(link.path) ? 'text-accent border-b-2 border-accent pb-1' : ''
+                className={`text-[17px] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4 rounded-sm ${
+                  isActiveLink(link.path)
+                    ? 'text-chocolateCosmos underline decoration-1 underline-offset-4'
+                    : 'text-ink hover:text-chocolateCosmos'
                 }`}
               >
                 {link.label}
@@ -41,9 +58,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-accent/10 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-hairline transition-colors focus:outline-none focus:ring-2 focus:ring-chocolateCosmos"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -51,16 +67,17 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-cream border-t border-accent/20 animate-slide-down">
+          <div className="md:hidden border-t border-hairline">
             <nav className="py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`block px-4 py-2 text-black hover:text-accent hover:bg-accent/10 rounded-lg transition-colors duration-200 ${
-                    isActiveLink(link.path) ? 'text-accent bg-accent/10' : ''
+                  className={`block px-4 py-2 rounded-lg transition-colors duration-200 ${
+                    isActiveLink(link.path)
+                      ? 'text-chocolateCosmos bg-chocolateCosmos/5'
+                      : 'text-ink hover:bg-hairline'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
