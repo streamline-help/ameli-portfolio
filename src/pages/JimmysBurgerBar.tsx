@@ -90,7 +90,7 @@ export default function JimmysBurgerBar() {
                     src={post.src}
                     alt={post.alt}
                     loading="lazy"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500 ease-refined"
                   />
                 </div>
               </InViewFade>
@@ -117,7 +117,7 @@ export default function JimmysBurgerBar() {
                       src={sauce.src}
                       alt={sauce.alt}
                       loading="lazy"
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500 ease-refined"
                     />
                   </div>
                   <p className="text-sm text-ink/70">{sauce.name}</p>
@@ -166,7 +166,7 @@ export default function JimmysBurgerBar() {
                     src={item.src}
                     alt={item.alt}
                     loading="lazy"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500 ease-refined"
                   />
                 </div>
               </InViewFade>
@@ -211,7 +211,7 @@ export default function JimmysBurgerBar() {
                   src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&h=600&fit=crop"
                   alt="Cap showcase"
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500 ease-refined"
                 />
               </div>
             </InViewFade>
@@ -232,7 +232,7 @@ export default function JimmysBurgerBar() {
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-12 border-t border-hairline">
               <Link
                 to="/work"
-                className="relative inline-flex items-center gap-2 text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
+                className="inline-flex items-center gap-2 text-chocolateCosmos hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
               >
                 <ArrowLeft size={20} />
                 Back to Work
@@ -240,7 +240,7 @@ export default function JimmysBurgerBar() {
 
               <Link
                 to="/work/habitat-cosmic-oasis"
-                className="relative inline-flex items-center gap-2 text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-4 after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 after:ease-refined hover:after:w-full"
+                className="inline-flex items-center gap-2 text-chocolateCosmos hover:text-rosewood transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-chocolateCosmos focus:ring-offset-4"
               >
                 Next Project
                 <ArrowRight size={20} />
