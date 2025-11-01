@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-bg py-12">
       <div className="mx-auto px-6 sm:px-12 lg:px-24 max-w-[1440px]">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-center md:text-left">
+        <div className="flex flex-col items-center gap-6">
+          <div className="text-center">
             <p className="font-medium mb-2">
               © 2025 Ameli van Zyl
             </p>
